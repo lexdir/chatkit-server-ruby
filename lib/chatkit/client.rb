@@ -75,7 +75,7 @@ module Chatkit
         method: "POST",
         path: "/users",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type"=> "application/json",
         },
         body: body,
         jwt: generate_su_token
@@ -229,7 +229,7 @@ module Chatkit
         method: "PUT",
         path: "/roles/#{role_name}/scope/#{scope}/permissions",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type"=> "application/json"
         },
         body: body,
         jwt: generate_su_token
@@ -243,7 +243,7 @@ module Chatkit
         method: "POST",
         path: "/roles",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type"=> "application/json"
         },
         body: {
           scope: scope,
@@ -273,7 +273,7 @@ module Chatkit
         method: "PUT",
         path: "/users/#{user_id}/roles",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type"=> "application/json",
         },
         body: body,
         jwt: generate_su_token
@@ -285,7 +285,7 @@ module Chatkit
         method: "DELETE",
         path: "/users/#{user_id}/roles",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type"=> "application/json",
         },
         query: { room_id: room_id },
         jwt: generate_su_token
